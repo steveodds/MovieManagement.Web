@@ -16,5 +16,7 @@ namespace MovieManagement.DataAccess
                 return dbContext.Categories.ToList();
             }
         }
+
+
     }
 }
