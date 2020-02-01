@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseRepository.cs" />
     <Compile Include="Category.cs">
       <DependentUpon>MovieDB.tt</DependentUpon>
     </Compile>
@@ -75,6 +76,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MovieDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="MovieRepository.cs" />
     <Compile Include="Movy.cs">
       <DependentUpon>MovieDB.tt</DependentUpon>
     </Compile>
@@ -82,6 +84,7 @@
     <Compile Include="Review.cs">
       <DependentUpon>MovieDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="ReviewRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MovieManagement.DataContracts\MovieManagement.DataContracts.csproj">
