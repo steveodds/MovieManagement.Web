@@ -28,21 +28,21 @@ namespace MovieManagement.Web.Areas.API.Controllers
         }
 
         [HttpGet]
-        [Route("{reviewId")]
+        [Route("{reviewId}")]
         public ReviewDTO GetReview(Guid reviewId)
         {
             return _reviewManagement.GetReview(reviewId);
         }
 
         [HttpPut]
-        [Route("reviewId")]
+        [Route("{reviewId}")]
         public void UpdateReview([FromBody]ReviewDTO review, Guid reviewId)
         {
             _reviewManagement.AddOrUpdate(review);
         }
 
         [HttpPost]
-        [Route("reviewId")]
+        [Route("{reviewId}")]
         public void SaveReview([FromBody]ReviewDTO review, Guid reviewId)
         {
             _reviewManagement.AddOrUpdate(review);
