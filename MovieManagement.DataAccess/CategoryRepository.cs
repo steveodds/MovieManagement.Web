@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MovieManagement.DataAccess
 {
-    class CategoryRepository : BaseRepository
+    public class CategoryRepository : BaseRepository
     {
 
         public List<Category> SearchCategories()
@@ -17,6 +17,11 @@ namespace MovieManagement.DataAccess
         public Category GetCategory(Guid categoryId)
         {
             return DbContext.Categories.FirstOrDefault(a => a.Id == categoryId);
+        }
+
+        public Category GetCategory(string name)
+        {
+            return DbContext.Categories.FirstOrDefault(a => a.Name.ToLower().Contains(name.ToLower()));
         }
 
         public void AddCategory(Category newCategory)

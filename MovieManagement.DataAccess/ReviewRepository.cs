@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MovieManagement.DataAccess
 {
-    class ReviewRepository : BaseRepository
+    public class ReviewRepository : BaseRepository
     {
 
         public List<Review> SearchReviews()

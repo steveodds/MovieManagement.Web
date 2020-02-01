@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MovieManagement.DataAccess
 {
-    class MovieRepository : BaseRepository
+    public class MovieRepository : BaseRepository
     {
 
         public List<Movy> SearchMovies()
@@ -40,7 +40,8 @@ namespace MovieManagement.DataAccess
             var existingMovie = DbContext.Movies.FirstOrDefault(a => a.Id == updatedMovie.Id);
             if (existingMovie != null)
             {
-                existingMovie.Title= updatedMovie.Title;
+                existingMovie.Title = updatedMovie.Title;
+                existingMovie.Rating = updatedMovie.Rating;
                 DbContext.SaveChanges();
             }
         }
