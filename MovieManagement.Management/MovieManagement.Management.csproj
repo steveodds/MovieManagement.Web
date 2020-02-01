@@ -41,9 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryManagement.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="MovieManagement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReviewManagement.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MovieManagement.DataAccess\MovieManagement.DataAccess.csproj">

@@ -14,7 +14,7 @@ namespace MovieManagement.DataAccess
             return DbContext.Movies.ToList();
         }
 
-        public Movy GetMovies(Guid movieId)
+        public Movy GetMovie(Guid movieId)
         {
             return DbContext.Movies.FirstOrDefault(a => a.Id == movieId);
         }

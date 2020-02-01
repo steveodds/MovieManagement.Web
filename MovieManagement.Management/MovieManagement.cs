@@ -10,7 +10,7 @@ namespace MovieManagement.Management
 {
     public class MovieManagement
     {
-        private MovieRepository _movieRepo = new MovieRepository();
+        private readonly MovieRepository _movieRepo = new MovieRepository();
         public List<MovieDTO> Search()
         {
             var result = _movieRepo.SearchMovies();
@@ -31,7 +31,7 @@ namespace MovieManagement.Management
 
         public MovieDTO GetMovie(Guid movieId)
         {
-            var result = _movieRepo.GetMovies(movieId);
+            var result = _movieRepo.GetMovie(movieId);
 
             return new MovieDTO
             {
